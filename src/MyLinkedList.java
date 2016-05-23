@@ -15,12 +15,29 @@ public class MyLinkedList {
     
     public void addOneNodeAfter(Node target, 
                                 Node newNode){
-        newNode.setNext = target.getNext();
-        target.setNext = newNode;
+        newNode.setNext(target.getNext());
+        target.setNext(newNode);
     }
     
     public void addOneNodeBeforeHead(Node newNode){
-        newNode.next = head;
+        newNode.setNext(head);
         head = newNode;
+    }
+    
+    public void printData(){
+        Node thisNode = this.head;
+        
+        if (thisNode == null) { return; }
+        else {
+
+            System.out.println(thisNode.getData());
+            
+            while (thisNode.getNext() != null) {
+                thisNode = thisNode.getNext();
+                System.out.println(thisNode.getData());
+            }
+                
+        }
+        
     }
 }
