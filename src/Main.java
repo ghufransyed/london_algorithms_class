@@ -1,6 +1,101 @@
+import java.io.*;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        
+        /*
+        Scanner in = new Scanner(System.in);
+        MyStack stack = new MyStack();
+        String inputString;
+        
+        
+        System.out.println("Please enter a few lines of strings (ended by 'end-of-input')");
+
+        inputString = in.nextLine(); 
+        while (! inputString.equalsIgnoreCase("end-of-input")){
+            stack.push(inputString);
+            inputString = in.nextLine(); 
+        }
+        
+        System.out.println("The reversed sequence of strings is: ");
+        
+        while (! stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
+        
+       */
+
+        Scanner in = new Scanner(System.in);
+        MyStack stack = new MyStack();
+        MyQueue queue = new MyQueue();
+        String inputString;
+
+
+        System.out.println("Please enter a few lines of strings (ended by 'end-of-input')");
+
+        inputString = in.nextLine();
+        while (! inputString.equalsIgnoreCase("end-of-input")){
+            queue.addToQueue(inputString);
+            inputString = in.nextLine();
+        }
+
+        System.out.println("The non-reversed sequence of strings is: ");
+
+        while (! queue.isEmpty()){
+            System.out.println(queue.takeFromQueue());
+        }
+        
+        
+        
+        
+        
+        
+        
+        /*
+        MyStack testStack1 = new MyStack();
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        
+        testStack1.push(1);
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of the top node is " + testStack1.top());
+
+        testStack1.push(2);
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of the top node is " + testStack1.top());
+
+
+        testStack1.push(3);
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of the top node is " + testStack1.top());
+
+
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of pop()" + testStack1.pop());
+
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of pop()" + testStack1.pop());
+
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of pop()" + testStack1.pop());
+
+        System.out.println("Stack empty? " + testStack1.isEmpty());
+        System.out.println("The value of pop()" + testStack1.pop());
+        
+         */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       /* 
         MyLinkedList l = new MyLinkedList();
         
         
@@ -10,14 +105,21 @@ public class Main {
         Node d = new Node("cat");
         Node e = new Node("the"); 
         
-        l.head = e; 
         
+        l.addOneNodeAsHead(e);
         l.addOneNodeAfter(e,d);
         l.addOneNodeAfter(d,c);
         l.addOneNodeAfter(c,b);
         l.addOneNodeAfter(b,a);
         
         l.printData();
+        
+        System.out.println(l.countNodes(l.head));
+        */
+        
+        
+        
+        
         
     }
 }

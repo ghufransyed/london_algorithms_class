@@ -9,6 +9,7 @@ public class MyLinkedList {
         head = null;
     }
     
+    
     public boolean isEmpty(){
         return head == null;
     }
@@ -19,10 +20,11 @@ public class MyLinkedList {
         target.setNext(newNode);
     }
     
-    public void addOneNodeBeforeHead(Node newNode){
+    public void addOneNodeAsHead(Node newNode){
         newNode.setNext(head);
         head = newNode;
     }
+    
     
     public void printData(){
         Node thisNode = this.head;
@@ -39,5 +41,13 @@ public class MyLinkedList {
                 
         }
         
+    }
+    
+    public int countNodes(Node head){
+        if (head == null) { return 0; }
+        else if (head.getNext() == null) { return 1; }
+        else {
+            return 1 + countNodes(head.getNext());
+        }
     }
 }
