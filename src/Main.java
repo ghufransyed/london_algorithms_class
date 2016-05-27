@@ -5,7 +5,14 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         
+        Factorial.backwardsString("abcdefg");
         
+        /*
+        System.out.println("Factorial 6 recursive is: " + Factorial.FactorialRecursive(6));
+        System.out.println("Factorial 6 iterative is: " + Factorial.FactorialIterative(6));
+        */
+        
+        /*
         MyBinaryTree tree = new MyBinaryTree();
         tree.addLeftSubTree(new MyBinaryTree());
         tree.addRightSubTree(new MyBinaryTree());
@@ -17,7 +24,7 @@ public class Main {
         System.out.println(tree.root.getData());
         System.out.println(tree.root.getleftChildTreeNode().getData());
         System.out.println(tree.root.getrightChildTreeNode().getData());
-        
+       */ 
         
         
         /*
