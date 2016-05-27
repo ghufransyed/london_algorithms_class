@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Created by ghufran on 5/26/16.
  */
@@ -49,7 +51,14 @@ public class TreeNode {
     public TreeNode getrightChildTreeNode(){
         return rightChild;
     }
+    
+    public void setData(Object data){
+        this.data = data;
+    }
 
+    public Object getData(){
+        return data;
+    }
 
 
 

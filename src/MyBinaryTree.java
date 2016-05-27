@@ -4,10 +4,10 @@ import apple.laf.JRSUIUtils;
  * Created by ghufran on 5/26/16.
  */
 public class MyBinaryTree {
-    private TreeNode root = null;
+    public TreeNode root;
     
     public MyBinaryTree(){
-        
+        root = new TreeNode();
     }
     
     public MyBinaryTree(TreeNode newNode){
@@ -28,6 +28,7 @@ public class MyBinaryTree {
     public void addRightSubTree(MyBinaryTree rightSubTree){
         root.setrightChildTreeNode(rightSubTree.root);
     }
+    
     
     
 }

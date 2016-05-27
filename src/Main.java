@@ -5,6 +5,21 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         
+        
+        MyBinaryTree tree = new MyBinaryTree();
+        tree.addLeftSubTree(new MyBinaryTree());
+        tree.addRightSubTree(new MyBinaryTree());
+        
+        tree.root.setData(1); 
+        tree.root.getleftChildTreeNode().setData(2);
+        tree.root.getrightChildTreeNode().setData(3);
+        
+        System.out.println(tree.root.getData());
+        System.out.println(tree.root.getleftChildTreeNode().getData());
+        System.out.println(tree.root.getrightChildTreeNode().getData());
+        
+        
+        
         /*
         Scanner in = new Scanner(System.in);
         MyStack stack = new MyStack();
@@ -27,6 +42,7 @@ public class Main {
         
        */
 
+        /*
         Scanner in = new Scanner(System.in);
         MyStack stack = new MyStack();
         MyQueue queue = new MyQueue();
@@ -47,7 +63,7 @@ public class Main {
             System.out.println(queue.takeFromQueue());
         }
         
-        
+       */ 
         
         
         
